@@ -1,0 +1,2 @@
+# pydiceware
+Python Diceware implementation
