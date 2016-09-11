@@ -1,5 +1,6 @@
 import random
 
+
 def read_list(filename):
     words = []
     with open(filename, "r") as wordfile:
@@ -11,7 +12,7 @@ def read_list(filename):
                 if line == "\n":
                     break
                 else:
-                    words.append(line.split("\t")[1].strip()) 
+                    words.append(line.split("\t")[1].strip())
     return words
 
 if __name__ == "__main__":
