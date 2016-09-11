@@ -17,11 +17,11 @@ def read_list(filename):
     return words
 
 
-def generate_passphrase(wordlist, length):
+def generate_passphrase(wordlist, length=5):
     return [random.choice(wordlist) for x in range(length)]
 
 
 if __name__ == "__main__":
     wordlist = read_list("diceware.wordlist.asc")
-    words = generate_passphrase(wordlist, 5)
+    words = generate_passphrase(wordlist)
     print("-".join(words))
