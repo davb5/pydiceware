@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import random
 
 
@@ -15,7 +16,12 @@ def read_list(filename):
                     words.append(line.split("\t")[1].strip())
     return words
 
+
+def generate_passphrase(wordlist, length):
+    return [random.choice(wordlist) for x in range(length)]
+
+
 if __name__ == "__main__":
     wordlist = read_list("diceware.wordlist.asc")
-    words = [random.choice(wordlist) for x in range(5)]
+    words = generate_passphrase(wordlist, 5)
     print("-".join(words))
