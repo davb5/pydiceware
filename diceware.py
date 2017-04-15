@@ -18,7 +18,7 @@ def read_list(filename):
 
 
 def generate_passphrase(wordlist, length=5):
-    return [random.choice(wordlist) for x in range(length)]
+    return [random.SystemRandom().choice(wordlist) for x in range(length)]
 
 
 if __name__ == "__main__":
